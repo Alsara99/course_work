@@ -7,7 +7,7 @@ import requests
 import logging
 
 logger = logging.getLogger(__name__)
-file_handler = logging.FileHandler('../logs/views.log')
+file_handler = logging.FileHandler('../course_work/logs/views.log')
 file_formatter = logging.Formatter('%(asctime)s %(levelname)s: %(message)s')
 
 file_handler.setFormatter(file_formatter)
