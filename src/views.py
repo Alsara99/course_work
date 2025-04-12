@@ -1,4 +1,5 @@
 from src.utils import *
+import datetime
 import logging
 
 logger = logging.getLogger(__name__)
@@ -10,13 +11,13 @@ logger.addHandler(file_handler)
 logger.setLevel(logging.INFO)
 
 
-def main_view(date):
+def main_view(path, date):
     """Собираем все необходимые функции для вкладки 'Главная'"""
     try:
         result = {
             "greeting": greeting(),
-            "card_info": card_info("../data/operations.xlsx", date),
-            "top_transactions": top_transactions("../data/operations.xlsx", date),
+            "card_info": card_info(path, date),
+            "top_transactions": top_transactions(path, date),
             "currency_rates": currency_rates(),
             "stock_prices": stock_prices()
         }
