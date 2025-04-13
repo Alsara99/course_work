@@ -1,0 +1,6 @@
+[run]
+omit =
+    */main.py
+
+[report]
+show_missing = true
